@@ -6,11 +6,15 @@ namespace PadawansTask2
     {
         public static int Calculate(int number, int add, int count)
         {
+            if(count<=0)
+            {
+                throw new ArgumentException();
+            }
             int sum = number;
             for(int i =1;i<count;i++)
             {
-                sum += number + i*add;
-                
+                sum += checked(number + i*add);
+
             }
             return sum;
         }
