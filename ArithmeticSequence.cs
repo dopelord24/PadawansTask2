@@ -6,8 +6,13 @@ namespace PadawansTask2
     {
         public static int Calculate(int number, int add, int count)
         {
-            // put your code here
-            throw new NotImplementedException();
+            int sum = number;
+            for(int i =1;i<count;i++)
+            {
+                sum += number + i*add;
+                
+            }
+            return sum;
         }
     }
 }
